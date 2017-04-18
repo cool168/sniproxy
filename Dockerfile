@@ -12,6 +12,8 @@ COPY sniproxy.conf /etc/sniproxy.conf
 
 COPY entrypoint.sh /entrypoint.sh
 
+RUN chmod +x /*.sh
+
 EXPOSE 443 
 
 ENTRYPOINT ["/entrypoint.sh"]
